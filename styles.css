@@ -14,12 +14,23 @@ body{
     padding: 10px;
     margin: 10px;
 }
-.imagen{
+.imagen {
     width: 200px;
     height: 200px;
-    background-image: ;
-
+    background-size: cover;
+    background-position: center;
 }
+
+#img1{
+    background-image: url(https://notiahorave.com/wp-content/uploads/2024/05/billie20eilish20back20tattoo20reveal20.jpg);
+}
+#img2{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/191125_Shawn_Mendes_at_the_2019_American_Music_Awards.png/220px-191125_Shawn_Mendes_at_the_2019_American_Music_Awards.png);
+}
+#img3{
+    background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/6/f/d/c/6fdc11cee9bfc9bfb990a389dbb23cf1.jpg);
+}
+
 .card-title{
     text-align: center;
     font-size: 20px;
