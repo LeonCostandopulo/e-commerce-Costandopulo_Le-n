@@ -1,5 +1,5 @@
-//anotación propia (ignorar): document.querySelector selecciona el primer elemento que coincida con el ("")
-document.querySelector(".cards .card-title").textContent = "Billie Eilish";
+function envolver () {
+    document.querySelector(".cards .card-title").textContent = "Billie Eilish";
 document.querySelector(".cards .card-description").textContent = "Mi artista favorita";
 
 document.querySelector("#card-title2").textContent = "Shawn Mendes";
@@ -43,3 +43,6 @@ for (let i = 0; i < data.length; i++) {
 
     container.appendChild(cardDiv);
 }
+
+}
+envolver();
