@@ -1,12 +1,12 @@
 function envolver () {
-    document.querySelector(".cards .card-title").textContent = "Billie Eilish";
-document.querySelector(".cards .card-description").textContent = "Mi artista favorita";
+    document.querySelector(".cards .card-title").textContent = "Mouse Gamer";
+document.querySelector(".cards .card-description").textContent = "Un increible mouse que...";
 
-document.querySelector("#card-title2").textContent = "Shawn Mendes";
-document.querySelector("#card-description2").textContent = "Artista favorito de mi amiga";
+document.querySelector("#card-title2").textContent = "Teclado Gamer";
+document.querySelector("#card-description2").textContent = "Un fantástico teclado que...";
 
-document.querySelector("#card-title3").textContent = "Seven Kayne";
-document.querySelector("#card-description3").textContent = "Artista favorito de mi amigo";
+document.querySelector("#card-title3").textContent = "Auriculares Gamer";
+document.querySelector("#card-description3").textContent = "Unos auriculares que...";
 
 let cards = document.querySelectorAll(".cards");
 
@@ -45,11 +45,4 @@ for (let i = 0; i < data.length; i++) {
 }
 
 }
-function verMas() {
-    const descripciones = document.querySelectorAll('.card-description'); 
-
-    descripciones.forEach(descripcion => {
-        descripcion.textContent = "Ver más...";  
-    });
-}
-verMas();
+envolver();

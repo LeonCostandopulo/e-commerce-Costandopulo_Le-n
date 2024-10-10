@@ -9,26 +9,36 @@ body{
     justify-content: center;
 }
 .cards{
+    
     border: 2px solid #46e;
     border-radius: 3px;
     padding: 10px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.imgcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .imagen {
     width: 200px;
     height: 200px;
     background-size: cover;
     background-position: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #img1{
-    background-image: url(https://notiahorave.com/wp-content/uploads/2024/05/billie20eilish20back20tattoo20reveal20.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7sXyh0EpGSjbMOAsBIFddHr2vvK_u1s4LTw&s);
 }
 #img2{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/191125_Shawn_Mendes_at_the_2019_American_Music_Awards.png/220px-191125_Shawn_Mendes_at_the_2019_American_Music_Awards.png);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwqY0-VQho8IyB5F9l3ck34MyVKUjubs-PXg&s);
 }
 #img3{
-    background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/6/f/d/c/6fdc11cee9bfc9bfb990a389dbb23cf1.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvoy8jfooyfQg5tj6K-4UIZWHIAuKQk6klKw&s);
 }
 
 .card-title{
@@ -38,4 +48,14 @@ body{
 }
 .card-description{
     text-align: center;
+}
+.card-button{
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #46e;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+    color: #46e;
+    font-size: 16px;
 }
