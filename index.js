@@ -45,4 +45,11 @@ for (let i = 0; i < data.length; i++) {
 }
 
 }
-envolver();
+function verMas() {
+    const descripciones = document.querySelectorAll('.card-description'); 
+
+    descripciones.forEach(descripcion => {
+        descripcion.textContent = "Ver más...";  
+    });
+}
+verMas();
