@@ -123,6 +123,7 @@ function envolver() {
         `).join('');
         updateContainerContent(filteredConvencionalHTML);
     });
+    // el filtrado del navbar decidí hacerlo con las palabras gamer o gaming, en vez de agregar una categoría nueva, espero que sea válido
 }
 
 envolver();
