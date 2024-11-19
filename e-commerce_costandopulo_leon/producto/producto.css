@@ -1,0 +1,164 @@
+#body {  /*sin el id no me funcionaba, no sé dónde hay más especificidad xd*/
+    background-color: #222;
+    color: #ddd;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;  
+    justify-content: center; 
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.menu, .cart {
+    text-decoration: none;
+    color: #48e;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #48e;
+    padding: 10px;
+    margin-right: 10px; 
+}
+.navbar {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;  
+    justify-content: center; 
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    border: 1px solid red;
+    position: relative;
+}
+
+.filtrar, .borrar {
+    color: #ddd;
+    border: 1px solid #48e;
+    border-radius: 3px;
+    padding: 5px;
+    width: 100px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+.borrar{
+    width: 50px;
+    background-color: #ff3838;
+    border : none;
+}
+.menu, .cart {
+    text-decoration: none;
+    color: #48e;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #48e;
+    padding: 10px;
+    margin-right: 10px; 
+}
+.cart {
+    margin: 5px;
+    padding: 17px;
+    background: url("https://media.istockphoto.com/id/1206806317/es/vector/icono-del-carrito-de-compras-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=sdScWRH_AeHdG6vHzMn8xUHCpe7iM6O1Skgi2lPuKG0=");
+    background-size: cover;
+    position: relative;
+}
+#cart-quantity{
+    position: absolute;
+    top: 70%;
+    right: -15%;
+    color: #222;
+    font-weight: 900;
+    filter: drop-shadow(0 0 4px #fff);
+}
+
+.session{
+    margin: 10px;
+    color: #48e;
+    border: 1px solid #48e;
+    padding: 5px 25px ;
+    text-decoration: none;
+}
+#session{
+    color: #48e;
+    text-decoration: none;
+}
+
+
+#product-image {
+    color: #ddd;
+    width: 300px; 
+    height: 300px; 
+    background-size: cover; 
+    background-position: center; 
+    margin: 20px 0;
+}
+.product-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-price {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-stock {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#comprar {
+    background-color: #46e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 6px #aaa;
+}
+
+/*CONTADOR*/
+.input-group {
+    color: #333;
+    text-align: center;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.counter-value {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-increase {
+    background-color: #4a5;
+    color: white;
+}
+.btn-decrease {
+    background-color: #f43;
+    color: white;
+    font-weight: bold;
+}
+.btn-reset {
+    background-color: #2196f3;
+    color: white;
+}
+
+/**/

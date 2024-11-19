@@ -1,0 +1,73 @@
+#cart { 
+    color: #ddd;
+    background-color: #222;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu, .cart {
+    text-decoration: none;
+    color: #48e;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #48e;
+    padding: 10px;
+    margin-right: 10px; 
+}
+.cart {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    margin: 0px;
+    padding: 17px;
+    background: url("https://media.istockphoto.com/id/1206806317/es/vector/icono-del-carrito-de-compras-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=sdScWRH_AeHdG6vHzMn8xUHCpe7iM6O1Skgi2lPuKG0=");
+    background-size: cover;
+}
+#cart-quantity{
+    position: absolute;
+    top: 60%;
+    right: -10%;
+    color: #222;
+    font-weight: 900;
+    filter: drop-shadow(0 0 4px #fff);
+}
+
+.finder {
+    border: 1px solid #48e;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    box-sizing: border-box; 
+    outline: none;
+}
+
+.filtrar, .borrar {
+    color: #ddd;
+    border: 1px solid #48e;
+    border-radius: 3px;
+    padding: 5px;
+    width: 100px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+.borrar{
+    width: 50px;
+    background-color: #ff3838;
+    border : none;
+}
+
+.session{
+    margin: 10px;
+    color: #48e;
+    border: 1px solid #48e;
+    padding: 5px 25px ;
+    text-decoration: none;
+}
+#session{
+    color: #48e;
+    text-decoration: none;
+}

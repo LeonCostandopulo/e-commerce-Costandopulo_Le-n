@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="producto.css">
+</head>
+<body id="body"> 
+    <navbar class="navbar" id="navbar">
+    </navbar>
+    <div id="products-container">
+        <h1 id="product-name"></h1>
+        <div id="product-image"></div>
+        <p id="product-price"></p>
+        <p id="product-stock"></p>
+        <a href="" id="comprar-link"><button  id="comprar"></button></a>
+    </div>
+    <div class="input-group">
+        <button class="btn btn-decrease" onclick="decreaseItem()">-</button>
+        <input type="number" class="counter-control" value="1"></input>
+        <button class="btn btn-increase" onclick="increaseItem()">+</button>
+        <button class="btn btn-reset" onclick="addItems()" >Añadir al carrito</button>
+    </div>
+
+
+
+    <script src="producto.js"></script>
+    <script src="../navbar.js"></script>
+</body>
+</html>
