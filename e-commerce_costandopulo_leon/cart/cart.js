@@ -1,5 +1,6 @@
 const cardSection = document.querySelector("#cart #cards");
 const totalElement = document.querySelector("#total"); 
+const email = localStorage.getItem("email");
 
 // *** Por si no hay nada en el carrito, que no aparezca vacío ***
 function getCard(cards) {
@@ -72,20 +73,62 @@ if (cartData) {
     getCard([]); 
 }
 
-// *** Botón Comprar ***
-const email = localStorage.getItem("email");
-
-if (email === null) {
-    document.querySelector("#btn-checkout").innerHTML = "Iniciar Sesión para comprar"; 
-    document.querySelector("#checkout-link").href = "../login/login.html";
-}
-
-// *** Boton Vaciar carrito *** 
-const btnClearCart = document.querySelector("#btn-clear");
-btnClearCart.addEventListener("click", () => {
+// *** Vaciar carrito *** 
+function clearCart() {
     if(email !== null) { //por si no hay usuario, que no se cree en cart
         localStorage.setItem("cart", "[]");
         localStorage.setItem("quantity", "0");
         location.href = "../index/index.html";
     }
+}
+
+// *** Boton Vaciar carrito *** 
+const btnClearCart = document.querySelector("#btn-clear");
+btnClearCart.addEventListener("click", () => {clearCart()});
+
+// otra validación para que esté logueado
+if (email === null) {
+    document.querySelector("#btn-checkout").innerHTML = "Iniciar Sesión para comprar"; 
+    document.querySelector("#checkout-link").href = "../login/login.html";
+}
+
+// *** Botón Comprar ***
+const btnCheckout = document.querySelector("#btn-checkout");
+btnCheckout.addEventListener("click", (event) => {
+    event.preventDefault(); // hay wque evitar la recarga, porque está envuelto en un href
+    checkout(); 
 });
+
+function checkout() {    
+
+    const recurso = {
+        user: localStorage.getItem("email"),
+        items: JSON.parse(localStorage.getItem("cart")),
+    }
+    console.log("RECURSO : " + recurso);
+
+    fetch("https://67367b0baafa2ef222309f81.mockapi.io/cart/orders", 
+        {
+            method: "POST",
+            body: JSON.stringify(recurso),
+        }
+    )
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data);
+        confirm({ //cambiar por swal.fire
+            text: `Gracias ${data.user} por tu compra. Hemos registrado su orden número #${data.id}`,
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#06f",
+        });
+        clearCart();
+    })
+
+    .catch(() => 
+        alert({  //cambiar por swal.fire
+            text: "Hubo un error al realizar la compra",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#06f",
+        })
+    ) 
+}

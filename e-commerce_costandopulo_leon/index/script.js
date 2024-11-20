@@ -30,3 +30,20 @@ const container = document.getElementById('products-container');
 
 let productosHTML = renderProducts(data);
 container.innerHTML = productosHTML;
+
+
+// *** Pantalla de carga  *** //ya sé que había que hacerlo con un spinner pero me parecía que quedaba más lindo con una animación :D
+function fadeOutLoader() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const loader = document.querySelector('.loader');
+            loader.style.display = 'none'; 
+            resolve(); 
+        }, 3500); 
+    });
+}
+
+// Uso de la promesa
+fadeOutLoader().then(() => {
+    console.log("El loader ha desaparecido.");
+});

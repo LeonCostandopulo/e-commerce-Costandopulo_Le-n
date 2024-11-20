@@ -5,6 +5,45 @@
     margin: 0;
     padding: 0;
 }
+/**PANTALLA DE CARGA**/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #222;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+.loaderVacio{
+    width: 400px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #48e;
+    position: relative;
+    z-index: 20;
+}
+.loaderLleno{
+    border-radius: 3px;
+    height: 16.5px;
+    background-color: #48e;
+    position: relative;
+    width: 100%;
+    animation: cargando 3s ease ;
+    z-index: 10;
+}
+@keyframes cargando {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
 /**NAVBAR**/
 .navbar {
     display: flex;
